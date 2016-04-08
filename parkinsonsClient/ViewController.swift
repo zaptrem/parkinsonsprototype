@@ -7,8 +7,27 @@
 //
 
 import UIKit
+import AVFoundation
+import Alamofire
 
 class ViewController: UIViewController {
+
+    var audioRecorder:AVAudioRecorder!
+
+    @IBAction func recordButton(sender: AnyObject) {
+        let result = testVoice()
+        if result == 1 {
+            print("Positive View will be activated")
+            
+            self.performSegueWithIdentifier("pushtoconfirmation", sender: self)
+            //Open RESULTS TRUE View Scene
+        }else{
+            //Open RESULTS FALSE View Scene
+        }
+        
+        
+    }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
