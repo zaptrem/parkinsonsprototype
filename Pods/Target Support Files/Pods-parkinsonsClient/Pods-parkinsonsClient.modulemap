@@ -1,0 +1,6 @@
+framework module Pods_parkinsonsClient {
+  umbrella header "Pods-parkinsonsClient-umbrella.h"
+
+  export *
+  module * { export * }
+}
