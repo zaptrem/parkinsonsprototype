@@ -12,6 +12,9 @@ import Alamofire
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var registerButton: UIButton!
+    @IBOutlet weak var contributeButton: UIButton!
 
     @IBOutlet weak var progressView: UIProgressView!
     var audioRecorder:AVAudioRecorder!
@@ -42,12 +45,24 @@ class ViewController: UIViewController {
         
     }
     override func viewWillAppear(animated: Bool) {
-        navigationItem.title = "One"
+        navigationItem.title = "Intro"
     }
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationController?.navigationBar.translucent = true
+        navigationController?.navigationBar.barTintColor = UIColor.cyanColor()
+        
+        contributeButton.backgroundColor = UIColor(white: 1, alpha: 0.65)
+        contributeButton.layer.cornerRadius = 5
+        
+        registerButton.backgroundColor = UIColor(white: 1, alpha: 0.65)
+        registerButton.layer.cornerRadius = 5
+        
+        loginButton.backgroundColor = UIColor(white: 1, alpha: 0.65)
+        loginButton.layer.cornerRadius = 5
     
         //progressView.setProgress(0, animated: true)
 

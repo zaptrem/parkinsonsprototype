@@ -17,7 +17,7 @@ import Alamofire
 func testVoice() -> Int {
     //Prepare to record and define settings
     let dirPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
-    
+    var finalResult = 0
     let currentDateTime = NSDate()
     let formatter = NSDateFormatter()
     formatter.dateFormat = "ddMMyyyy-HHmmss"
@@ -33,9 +33,13 @@ func testVoice() -> Int {
     audioRecorder.meteringEnabled = true
     audioRecorder.prepareToRecord()
     //audioRecorder.record()
-    audioRecorder.recordForDuration(5)
+    if audioRecorder.recordForDuration(5) == true {
+        print("Recording completed!")
+        let finalResult = uploadSound(filePath!)
+    }
     
     var timer = 0
+    
     
     
     print("party!")
@@ -44,7 +48,7 @@ func testVoice() -> Int {
     
     //Success, now upload to server
 
-    let finalResult = uploadSound(filePath!)
+    
     return finalResult
 
     

@@ -14,6 +14,9 @@
 		B6532BDC1C8242720017FE17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6532BDB1C8242720017FE17 /* Assets.xcassets */; };
 		B6532BDF1C8242720017FE17 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6532BDD1C8242720017FE17 /* LaunchScreen.storyboard */; };
 		B6779B081CB8D522000ADF5D /* NegativeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6779B071CB8D522000ADF5D /* NegativeViewController.swift */; };
+		B6779B0A1CB97E4C000ADF5D /* ContributeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6779B091CB97E4C000ADF5D /* ContributeViewController.swift */; };
+		B6779B0C1CB9A176000ADF5D /* RegisterPatientTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6779B0B1CB9A176000ADF5D /* RegisterPatientTableViewController.swift */; };
+		B6779B0E1CB9A734000ADF5D /* PreRegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6779B0D1CB9A734000ADF5D /* PreRegistrationViewController.swift */; };
 		B6A5F3671CB58658000D8449 /* theRealCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A5F3661CB58658000D8449 /* theRealCode.swift */; };
 		B6A5F3691CB5FAF7000D8449 /* TutorialPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A5F3681CB5FAF7000D8449 /* TutorialPageViewController.swift */; };
 /* End PBXBuildFile section */
@@ -42,6 +45,9 @@
 		B6532BDE1C8242720017FE17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B6532BE01C8242720017FE17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B6779B071CB8D522000ADF5D /* NegativeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NegativeViewController.swift; sourceTree = "<group>"; };
+		B6779B091CB97E4C000ADF5D /* ContributeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContributeViewController.swift; sourceTree = "<group>"; };
+		B6779B0B1CB9A176000ADF5D /* RegisterPatientTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterPatientTableViewController.swift; sourceTree = "<group>"; };
+		B6779B0D1CB9A734000ADF5D /* PreRegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreRegistrationViewController.swift; sourceTree = "<group>"; };
 		B6A5F3661CB58658000D8449 /* theRealCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = theRealCode.swift; sourceTree = "<group>"; };
 		B6A5F3681CB5FAF7000D8449 /* TutorialPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialPageViewController.swift; sourceTree = "<group>"; };
 		B6ED73211C8260FE00C70716 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Pods/../build/Debug-iphoneos/Alamofire.framework"; sourceTree = "<group>"; };
@@ -100,11 +106,14 @@
 			isa = PBXGroup;
 			children = (
 				B6532BD41C8242720017FE17 /* AppDelegate.swift */,
-				B6779B071CB8D522000ADF5D /* NegativeViewController.swift */,
 				B6532BD61C8242720017FE17 /* ViewController.swift */,
-				B6A5F3661CB58658000D8449 /* theRealCode.swift */,
-				B6532BD81C8242720017FE17 /* Main.storyboard */,
 				B6A5F3681CB5FAF7000D8449 /* TutorialPageViewController.swift */,
+				B6779B071CB8D522000ADF5D /* NegativeViewController.swift */,
+				B6779B091CB97E4C000ADF5D /* ContributeViewController.swift */,
+				B6779B0D1CB9A734000ADF5D /* PreRegistrationViewController.swift */,
+				B6779B0B1CB9A176000ADF5D /* RegisterPatientTableViewController.swift */,
+				B6532BD81C8242720017FE17 /* Main.storyboard */,
+				B6A5F3661CB58658000D8449 /* theRealCode.swift */,
 				B6532BDB1C8242720017FE17 /* Assets.xcassets */,
 				B6532BDD1C8242720017FE17 /* LaunchScreen.storyboard */,
 				B6532BE01C8242720017FE17 /* Info.plist */,
@@ -237,10 +246,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6532BD71C8242720017FE17 /* ViewController.swift in Sources */,
+				B6779B0A1CB97E4C000ADF5D /* ContributeViewController.swift in Sources */,
+				B6779B0C1CB9A176000ADF5D /* RegisterPatientTableViewController.swift in Sources */,
 				B6A5F3691CB5FAF7000D8449 /* TutorialPageViewController.swift in Sources */,
 				B6779B081CB8D522000ADF5D /* NegativeViewController.swift in Sources */,
 				B6A5F3671CB58658000D8449 /* theRealCode.swift in Sources */,
 				B6532BD51C8242720017FE17 /* AppDelegate.swift in Sources */,
+				B6779B0E1CB9A734000ADF5D /* PreRegistrationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
