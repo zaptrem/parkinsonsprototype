@@ -41,6 +41,9 @@ class ViewController: UIViewController {
         
         
     }
+    override func viewWillAppear(animated: Bool) {
+        navigationItem.title = "One"
+    }
     
 
     override func viewDidLoad() {
