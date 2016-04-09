@@ -12,6 +12,8 @@ import Alamofire
 
     var audioRecorder:AVAudioRecorder!
 
+
+
 func testVoice() -> Int {
     //Prepare to record and define settings
     let dirPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
@@ -32,16 +34,26 @@ func testVoice() -> Int {
     audioRecorder.prepareToRecord()
     //audioRecorder.record()
     audioRecorder.recordForDuration(5)
+    
+    var timer = 0
+    
+    
     print("party!")
     uploadSound(filePath!)
     
-    //Success, now upload to server
     
+    //Success, now upload to server
+
     let finalResult = uploadSound(filePath!)
     return finalResult
+
     
 }
+
+
+
 func uploadSound(location: NSURL) -> Int {
+
     var manager = Manager.sharedInstance
     manager.session.configuration.HTTPAdditionalHeaders = ["Content-Type": "application/octet-stream"]
     

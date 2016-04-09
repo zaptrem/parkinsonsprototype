@@ -12,7 +12,21 @@ import Alamofire
 
 class ViewController: UIViewController {
 
+
+    @IBOutlet weak var progressView: UIProgressView!
     var audioRecorder:AVAudioRecorder!
+    
+    var counter:Int = 0 {
+        didSet {
+            let fractionalProgress = Float(counter) / 100.0
+            let animated = counter != 0
+            
+            progressView.setProgress(fractionalProgress, animated: animated)
+            //progressLabel.text = ("\(counter)%")
+        }
+    }
+    
+    @IBOutlet weak var recordButton: UIButton!
 
     @IBAction func recordButton(sender: AnyObject) {
         let result = testVoice()
@@ -31,6 +45,9 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+    
+        //progressView.setProgress(0, animated: true)
+
         // Do any additional setup after loading the view, typically from a nib.
     }
 
