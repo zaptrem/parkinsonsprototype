@@ -96,8 +96,8 @@ var soundFileURL:NSURL!
 
 func uploadSound(location: NSURL) -> Int {
 
-  //  var manager = Manager.sharedInstance
-//    manager.session.configuration.HTTPAdditionalHeaders = ["Content-Type": "application/octet-stream"]
+    var manager = Manager.sharedInstance
+    manager.session.configuration.HTTPAdditionalHeaders = ["Content-Type": "application/octet-stream"]
     
     
     //let imageData: NSMutableData = NSMutableData.dataWithData(UIImageJPEGRepresentation(imageTest.image, 30));
@@ -136,14 +136,13 @@ func uploadSound(location: NSURL) -> Int {
 //                result = 1
 //            }else{
 //                result = 0
-//            } 
-
+//            }
     
     
     //ALWAYS RETURNS TRUE RIGHT NOW, BETTER FIX THAT SOON!!
     if result == nil{
         print("ERROR! GOT NO RESPONSE OR WENT TOO FAST")
-        result = 0
+        result = 1
     }
     return result
 }
