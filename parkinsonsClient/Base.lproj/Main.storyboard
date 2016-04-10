@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -27,7 +27,7 @@
                                 </connections>
                             </button>
                             <progressView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progressViewStyle="bar" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="crW-If-epQ">
-                                <rect key="frame" x="112" y="392" width="150" height="2.5"/>
+                                <rect key="frame" x="112" y="392" width="150" height="3"/>
                             </progressView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="parkinsonslogo-4" translatesAutoresizingMaskIntoConstraints="NO" id="GQ0-Kw-VmR">
                                 <rect key="frame" x="85" y="-12" width="205" height="205"/>
@@ -86,15 +86,42 @@
                         <viewControllerLayoutGuide type="top" id="WpQ-b0-Adh"/>
                         <viewControllerLayoutGuide type="bottom" id="3It-DH-8kg"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="sXo-8W-z5h">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <view key="view" alpha="0.80000000000000004" contentMode="scaleToFill" id="sXo-8W-z5h">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="3 out of 5" translatesAutoresizingMaskIntoConstraints="NO" id="WId-Xy-wRg">
+                                <rect key="frame" x="52" y="158" width="277" height="89"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="What is Parkinson's disease?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n4s-RG-cnl">
+                                <rect key="frame" x="28" y="64" width="329" height="61"/>
+                                <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="23"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="who-5o-hv9">
+                                <rect key="frame" x="21" y="271" width="334" height="232"/>
+                                <string key="text">Parkinson's disease is a chronic disease.  It is one of the few diseases that alters the motor system. Parkinson's disease also involves the decay of brain cells specifically nerve cells. It is the second most common neurodegenerative disorder in the U.S., and it affects an estimated six million people worldwide.     </string>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="20"/>
+                                <color key="textColor" red="0.99215692280000001" green="0.99607849120000003" blue="0.99607849120000003" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.94117647058823528" green="0.5725490196078431" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.0" green="0.96078437566757202" blue="0.19215688109397888" alpha="1" colorSpace="deviceRGB"/>
+                        <constraints>
+                            <constraint firstItem="WId-Xy-wRg" firstAttribute="centerX" secondItem="sXo-8W-z5h" secondAttribute="centerX" id="4Mi-bj-1Gz"/>
+                            <constraint firstItem="WId-Xy-wRg" firstAttribute="top" secondItem="n4s-RG-cnl" secondAttribute="bottom" constant="33" id="FOG-Iv-fx5"/>
+                            <constraint firstItem="who-5o-hv9" firstAttribute="centerX" secondItem="sXo-8W-z5h" secondAttribute="centerX" id="Gc7-Op-jSo"/>
+                            <constraint firstItem="who-5o-hv9" firstAttribute="top" secondItem="WId-Xy-wRg" secondAttribute="bottom" constant="24" id="K2y-83-Sru"/>
+                            <constraint firstItem="n4s-RG-cnl" firstAttribute="centerX" secondItem="sXo-8W-z5h" secondAttribute="centerX" id="UkP-GQ-n3X"/>
+                        </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zbC-kB-54N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="30" y="-1033"/>
+            <point key="canvasLocation" x="29.5" y="-1033.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="r0L-BF-ayo">
@@ -108,20 +135,59 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You've got... Parkinson's!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uc1-lK-UeX">
-                                <rect key="frame" x="7" y="28" width="368" height="166"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="67"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G7q-Gq-UKy">
+                                <rect key="frame" x="157" y="286" width="61" height="95"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="69"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Swipe left for more information" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WOH-9h-4x8">
+                                <rect key="frame" x="36" y="571" width="236" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Arrow" translatesAutoresizingMaskIntoConstraints="NO" id="st3-oD-eu1">
+                                <rect key="frame" x="280" y="551" width="92" height="75"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="The likelihood that you have Parkinson's disease is: " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bVZ-eb-kr7">
+                                <rect key="frame" x="36" y="178" width="301" height="50"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Unfortunately your results have come back positive. " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ne8-WV-meA">
+                                <rect key="frame" x="28" y="35" width="309" height="100"/>
+                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="25"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="However, your results are not conclusive, so if you think you have Parkinson's disease. You should contact your doctor. " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e4u-18-h8H">
+                                <rect key="frame" x="7" y="392" width="358" height="151"/>
+                                <fontDescription key="fontDescription" name="Verdana-Italic" family="Verdana" pointSize="18"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.2976006048" green="0.8046543585" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="G7q-Gq-UKy" firstAttribute="top" secondItem="bVZ-eb-kr7" secondAttribute="bottom" constant="23" id="3KL-gq-KlF"/>
+                            <constraint firstItem="Ne8-WV-meA" firstAttribute="centerX" secondItem="13t-9i-yqy" secondAttribute="centerX" id="7YF-dj-5EL"/>
+                            <constraint firstItem="bVZ-eb-kr7" firstAttribute="top" secondItem="Ne8-WV-meA" secondAttribute="bottom" constant="48" id="8bF-NI-EwM"/>
+                            <constraint firstItem="st3-oD-eu1" firstAttribute="top" secondItem="e4u-18-h8H" secondAttribute="bottom" constant="-2" id="EQw-Qs-LS0"/>
+                            <constraint firstItem="bVZ-eb-kr7" firstAttribute="centerX" secondItem="13t-9i-yqy" secondAttribute="centerX" id="Jni-zl-qXo"/>
+                            <constraint firstItem="WOH-9h-4x8" firstAttribute="top" secondItem="e4u-18-h8H" secondAttribute="bottom" constant="18" id="adC-HN-BFj"/>
+                            <constraint firstItem="G7q-Gq-UKy" firstAttribute="centerX" secondItem="13t-9i-yqy" secondAttribute="centerX" id="cqv-wo-gUp"/>
+                            <constraint firstItem="e4u-18-h8H" firstAttribute="centerX" secondItem="13t-9i-yqy" secondAttribute="centerX" id="gLI-tC-3q3"/>
+                            <constraint firstItem="G7q-Gq-UKy" firstAttribute="centerY" secondItem="13t-9i-yqy" secondAttribute="centerY" id="t0o-mG-7e4"/>
+                            <constraint firstItem="st3-oD-eu1" firstAttribute="leading" secondItem="WOH-9h-4x8" secondAttribute="trailing" constant="8" id="wrH-xq-63N"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lEe-MH-D8d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-678" y="-1033"/>
+            <point key="canvasLocation" x="-678.5" y="-1028.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="H5P-lc-pMz">
@@ -132,14 +198,61 @@
                         <viewControllerLayoutGuide type="bottom" id="rYl-Ar-x99"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="DLL-xu-SVm">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="The likelihood that you have Parkinson's disease is: " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OJs-xA-TGa">
+                                <rect key="frame" x="45" y="128" width="301" height="50"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k1z-bZ-vph">
+                                <rect key="frame" x="157" y="239" width="61" height="95"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="69"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AL2-oH-g0s">
+                                <rect key="frame" x="36" y="333" width="319" height="151"/>
+                                <string key="text">However, your results are not conclusive, so if you think this it is likely that you have Parkinsons. You should contact your doctor. </string>
+                                <fontDescription key="fontDescription" name="Verdana-Italic" family="Verdana" pointSize="18"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="If you want to find a Dr near you. " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YCy-3K-XNq">
+                                <rect key="frame" x="63" y="503" width="252" height="50"/>
+                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tgb-MM-v4z">
+                                <rect key="frame" x="152" y="561" width="71" height="32"/>
+                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="16"/>
+                                <state key="normal" title="Go here. ">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.2976006048" green="0.8046543585" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="k1z-bZ-vph" firstAttribute="top" secondItem="OJs-xA-TGa" secondAttribute="bottom" constant="53" id="8my-zZ-qWz"/>
+                            <constraint firstItem="OJs-xA-TGa" firstAttribute="centerX" secondItem="DLL-xu-SVm" secondAttribute="centerX" id="E1l-uX-hUM"/>
+                            <constraint firstItem="YCy-3K-XNq" firstAttribute="centerX" secondItem="DLL-xu-SVm" secondAttribute="centerX" id="Mrm-Ga-F9g"/>
+                            <constraint firstItem="AL2-oH-g0s" firstAttribute="top" secondItem="k1z-bZ-vph" secondAttribute="bottom" constant="-1" id="NOG-xV-5T1"/>
+                            <constraint firstItem="tgb-MM-v4z" firstAttribute="centerX" secondItem="DLL-xu-SVm" secondAttribute="centerX" id="d5h-bo-VAN"/>
+                            <constraint firstItem="AL2-oH-g0s" firstAttribute="centerX" secondItem="DLL-xu-SVm" secondAttribute="centerX" id="dA8-Ww-cyd"/>
+                            <constraint firstItem="k1z-bZ-vph" firstAttribute="centerX" secondItem="DLL-xu-SVm" secondAttribute="centerX" id="iis-AA-le5"/>
+                            <constraint firstItem="tgb-MM-v4z" firstAttribute="top" secondItem="YCy-3K-XNq" secondAttribute="bottom" constant="8" id="kGK-uR-rsW"/>
+                            <constraint firstItem="k1z-bZ-vph" firstAttribute="centerY" secondItem="DLL-xu-SVm" secondAttribute="centerY" id="kxa-iw-VeM"/>
+                            <constraint firstItem="YCy-3K-XNq" firstAttribute="top" secondItem="AL2-oH-g0s" secondAttribute="bottom" constant="19" id="wPZ-OM-vmh"/>
+                        </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sqO-Nd-SwP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2160" y="-1033"/>
+            <point key="canvasLocation" x="2159.5" y="-1033.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="zNy-vA-G1z">
@@ -150,14 +263,99 @@
                         <viewControllerLayoutGuide type="bottom" id="a5o-GE-Rpv"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="2Je-9w-q5m">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="moving slower of movement" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PgS-wp-KUQ">
+                                <rect key="frame" x="85" y="275" width="277" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Parkinsons infographic" translatesAutoresizingMaskIntoConstraints="NO" id="K0i-rb-pJg">
+                                <rect key="frame" x="67" y="500" width="240" height="72"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Stiffness of limbs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3tP-Qp-Gs1">
+                                <rect key="frame" x="95" y="422" width="281" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ytn-wO-fvq">
+                                <rect key="frame" x="48" y="406" width="35" height="50"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="61"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lZZ-ii-lU6">
+                                <rect key="frame" x="48" y="346" width="35" height="50"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="61"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xY3-Lk-UTM">
+                                <rect key="frame" x="48" y="279" width="35" height="50"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="61"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pmC-NQ-UQl">
+                                <rect key="frame" x="48" y="214" width="35" height="50"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="61"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="slower movement" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bwH-d4-AxE">
+                                <rect key="frame" x="95" y="294" width="277" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="loss of or worsened balance or coordination " lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3wN-q0-BUM">
+                                <rect key="frame" x="93" y="351" width="281" height="58"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Symptoms of Parkinsons" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JnB-G7-6js">
+                                <rect key="frame" x="92" y="97" width="190" height="66"/>
+                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="27"/>
+                                <color key="textColor" red="0.99046096230000003" green="0.99678278320000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="quivering of limbs, hands, arms, legs, and face" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dwb-g6-bZ3">
+                                <rect key="frame" x="92" y="230" width="273" height="56"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.9647059440612793" green="0.47843140363693237" blue="0.46666669845581055" alpha="1" colorSpace="deviceRGB"/>
+                        <constraints>
+                            <constraint firstItem="3tP-Qp-Gs1" firstAttribute="leading" secondItem="ytn-wO-fvq" secondAttribute="trailing" constant="12" id="2hW-VC-8AC"/>
+                            <constraint firstItem="Dwb-g6-bZ3" firstAttribute="leading" secondItem="pmC-NQ-UQl" secondAttribute="trailing" constant="9" id="45z-49-mN7"/>
+                            <constraint firstItem="ytn-wO-fvq" firstAttribute="top" secondItem="lZZ-ii-lU6" secondAttribute="bottom" constant="21" id="Pcw-40-07W"/>
+                            <constraint firstItem="Dwb-g6-bZ3" firstAttribute="top" secondItem="JnB-G7-6js" secondAttribute="bottom" constant="67" id="UyU-BW-96o"/>
+                            <constraint firstItem="3wN-q0-BUM" firstAttribute="leading" secondItem="lZZ-ii-lU6" secondAttribute="trailing" constant="12" id="Xrr-mr-7Ep"/>
+                            <constraint firstItem="bwH-d4-AxE" firstAttribute="leading" secondItem="xY3-Lk-UTM" secondAttribute="trailing" constant="12" id="ajf-VD-1sB"/>
+                            <constraint firstItem="lZZ-ii-lU6" firstAttribute="top" secondItem="xY3-Lk-UTM" secondAttribute="bottom" constant="5" id="dOS-3p-LeH"/>
+                            <constraint firstItem="K0i-rb-pJg" firstAttribute="top" secondItem="3tP-Qp-Gs1" secondAttribute="bottom" constant="44" id="h3r-kd-F4S"/>
+                            <constraint firstItem="xY3-Lk-UTM" firstAttribute="top" secondItem="pmC-NQ-UQl" secondAttribute="bottom" constant="19" id="h6M-6K-LPq"/>
+                            <constraint firstItem="JnB-G7-6js" firstAttribute="centerX" secondItem="2Je-9w-q5m" secondAttribute="centerX" id="nzp-gP-Je5"/>
+                            <constraint firstItem="PgS-wp-KUQ" firstAttribute="centerY" secondItem="2Je-9w-q5m" secondAttribute="centerY" id="rqi-y4-vHI"/>
+                            <constraint firstItem="K0i-rb-pJg" firstAttribute="centerX" secondItem="2Je-9w-q5m" secondAttribute="centerX" id="t3P-tg-Nhy"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="PgS-wp-KUQ"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S7D-JY-412" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="-1033"/>
+            <point key="canvasLocation" x="749.5" y="-1033.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="B5D-KC-9JL">
@@ -168,14 +366,80 @@
                         <viewControllerLayoutGuide type="bottom" id="ufJ-Ek-nuU"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Z7C-BC-qsa">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Treatments" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D0p-Ht-w6m">
+                                <rect key="frame" x="86" y="43" width="203" height="59"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MRh-6X-BQp">
+                                <rect key="frame" x="57" y="243" width="23" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aiZ-GZ-vMz">
+                                <rect key="frame" x="57" y="363" width="23" height="45"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GwC-AA-yx2">
+                                <rect key="frame" x="57" y="512" width="15" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Treatment for Parkinson's Disease can only be based on the individual's symtpoms." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lAQ-2Q-BBu">
+                                <rect key="frame" x="44" y="110" width="286" height="94"/>
+                                <fontDescription key="fontDescription" name="Verdana-Italic" family="Verdana" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="If you have impaired motor systems, there are various medications one can take. " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JSH-dv-v7s">
+                                <rect key="frame" x="95" y="231" width="211" height="106"/>
+                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="There are also various surgical treatements available. " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pK5-RU-YX0">
+                                <rect key="frame" x="95" y="345" width="244" height="97"/>
+                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x62-L0-YRk">
+                                <rect key="frame" x="95" y="446" width="203" height="154"/>
+                                <string key="text">Exercise is also an essential way to control the disease. Exercises vary from biking, running, tai chi, yoga, dancing, and other cardio related exercises.</string>
+                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.36496132590901731" green="0.4397654294203962" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="lAQ-2Q-BBu" firstAttribute="top" secondItem="D0p-Ht-w6m" secondAttribute="bottom" constant="8" id="5am-CV-lVb"/>
+                            <constraint firstItem="pK5-RU-YX0" firstAttribute="centerX" secondItem="Z7C-BC-qsa" secondAttribute="centerX" id="7qd-rR-fQ7"/>
+                            <constraint firstItem="lAQ-2Q-BBu" firstAttribute="centerX" secondItem="Z7C-BC-qsa" secondAttribute="centerX" id="DwA-LA-nMW"/>
+                            <constraint firstItem="pK5-RU-YX0" firstAttribute="leading" secondItem="aiZ-GZ-vMz" secondAttribute="trailing" constant="-1" id="Jl1-ME-v8M"/>
+                            <constraint firstItem="aiZ-GZ-vMz" firstAttribute="top" secondItem="MRh-6X-BQp" secondAttribute="bottom" constant="67" id="Pa4-Ni-8Wg"/>
+                            <constraint firstItem="JSH-dv-v7s" firstAttribute="top" secondItem="lAQ-2Q-BBu" secondAttribute="bottom" constant="27" id="VjF-uh-Gen"/>
+                            <constraint firstItem="JSH-dv-v7s" firstAttribute="centerX" secondItem="Z7C-BC-qsa" secondAttribute="centerX" id="WTn-Bk-jnS"/>
+                            <constraint firstItem="GwC-AA-yx2" firstAttribute="top" secondItem="aiZ-GZ-vMz" secondAttribute="bottom" constant="72" id="fBr-0g-Ujd"/>
+                            <constraint firstItem="x62-L0-YRk" firstAttribute="centerX" secondItem="Z7C-BC-qsa" secondAttribute="centerX" id="lPt-jS-kGA"/>
+                            <constraint firstItem="D0p-Ht-w6m" firstAttribute="centerX" secondItem="Z7C-BC-qsa" secondAttribute="centerX" id="rpC-UD-Hdc"/>
+                            <constraint firstItem="JSH-dv-v7s" firstAttribute="leading" secondItem="MRh-6X-BQp" secondAttribute="trailing" constant="15" id="ton-gA-Zzs"/>
+                            <constraint firstItem="x62-L0-YRk" firstAttribute="leading" secondItem="GwC-AA-yx2" secondAttribute="trailing" constant="23" id="vzf-oc-Kto"/>
+                        </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g9d-Jx-uFS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1466" y="-1033"/>
+            <point key="canvasLocation" x="1465.5" y="-1033.5"/>
         </scene>
         <!--Tutorial Page View Controller-->
         <scene sceneID="3FW-fF-Qkg">
@@ -190,6 +454,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="3 out of 5" width="400" height="96"/>
+        <image name="Arrow" width="200" height="200"/>
+        <image name="Parkinsons infographic" width="600" height="120"/>
         <image name="parkinsonslogo-4" width="5906" height="5906"/>
     </resources>
 </document>
