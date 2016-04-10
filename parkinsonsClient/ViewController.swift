@@ -15,9 +15,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var registerButton: UIButton!
     @IBOutlet weak var contributeButton: UIButton!
+    var soundFileURL:NSURL!
 
     @IBOutlet weak var progressView: UIProgressView!
-    var audioRecorder:AVAudioRecorder!
+    var recorder:AVAudioRecorder!
     
     var counter:Int = 0 {
         didSet {
@@ -32,15 +33,44 @@ class ViewController: UIViewController {
     @IBOutlet weak var recordButton: UIButton!
 
     @IBAction func recordButton(sender: AnyObject) {
-        let result = testVoice()
-        if result == 1 {
-            print("Positive View will be activated")
-            
-            self.performSegueWithIdentifier("pushtoconfirmation", sender: self)
-            //Open RESULTS TRUE View Scene
-        }else{
-            //Open RESULTS FALSE View Scene
+        let format = NSDateFormatter()
+        format.dateFormat="yyyy-MM-dd-HH-mm-ss"
+        let currentFileName = "recording-\(format.stringFromDate(NSDate())).wav"
+        print(currentFileName)
+        
+        let documentsDirectory = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)[0]
+        self.soundFileURL = documentsDirectory.URLByAppendingPathComponent(currentFileName)
+        
+        
+
+        var recordSettings = [
+            AVFormatIDKey: NSNumber(unsignedInt:kAudioFormatLinearPCM),
+            AVEncoderAudioQualityKey : AVAudioQuality.Max.rawValue,
+            AVEncoderBitRateKey : 1411200,
+            AVNumberOfChannelsKey: 2,
+            AVSampleRateKey : 44100.0
+        ]
+        do {
+            recorder = try AVAudioRecorder(URL: soundFileURL, settings: recordSettings)
+            recorder.delegate = self
+            recorder.meteringEnabled = true
+            recorder.prepareToRecord() // creates/overwrites the file at soundFileURL
+            recorder.recordForDuration(10)
+        } catch let error as NSError {
+            recorder = nil
+            print(error.localizedDescription)
         }
+//        let result = testVoice()
+//        if result == 1 {
+//            print("Positive View will be activated")
+//            
+//            self.performSegueWithIdentifier("pushtoconfirmation", sender: self)
+//            //Open RESULTS TRUE View Scene
+//        }else{
+//            //Open RESULTS FALSE View Scene
+//            print("Negative View will be activated")
+//            self.performSegueWithIdentifier("pushtonegative", sender: self)
+//        }
         
         
     }
@@ -76,4 +106,47 @@ class ViewController: UIViewController {
 
 
 }
+
+extension ViewController : AVAudioRecorderDelegate {
+    
+    func audioRecorderDidFinishRecording(recorder: AVAudioRecorder!,
+                                         successfully flag: Bool) {
+        print("finished recording \(flag)")
+        
+        var result = uploadSound(soundFileURL)
+        
+        if result == 1 {
+            print("Positive View will be activated")
+            
+            self.performSegueWithIdentifier("pushtoconfirmation", sender: self)
+            //Open RESULTS TRUE View Scene
+        }else if result == 0{
+            //Open RESULTS FALSE View Scene
+            print("Negative View will be activated")
+            self.performSegueWithIdentifier("pushtonegative", sender: self)
+        }else{
+            print("ERROR ERROR DIDN'T RECIEVE RESULT IN TIME")
+        }
+
+
+        
+        // ios8 and later
+        var alert = UIAlertController(title: "Recorder",
+                                      message: "Finished Recording",
+                                      preferredStyle: .Alert)
+        alert.addAction(UIAlertAction(title: "Keep", style: .Default, handler: {action in
+            print("keep was tapped")
+        }))
+        alert.addAction(UIAlertAction(title: "Delete", style: .Default, handler: {action in
+            self.recorder.deleteRecording()
+        }))
+        self.presentViewController(alert, animated:true, completion:nil)
+    }
+    
+    func audioRecorderEncodeErrorDidOccur(recorder: AVAudioRecorder!,
+                                          error: NSError!) {
+        print("\(error.localizedDescription)")
+    }
+}
+
 

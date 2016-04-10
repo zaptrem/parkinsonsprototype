@@ -9,7 +9,7 @@
         <scene sceneID="lJx-74-oaV">
             <objects>
                 <tableViewController id="sye-XG-gLB" customClass="RegisterPatientTableViewController" customModule="parkinsonsClient" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="i0L-Hq-msF">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="i0L-Hq-msF" customClass="tableView">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -162,10 +162,6 @@
                         </connections>
                     </tableView>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <connections>
-                        <outlet property="createAccountButton" destination="xYK-cA-Rhq" id="Kf4-dC-qNP"/>
-                        <outlet property="createAcountButton" destination="i0L-Hq-msF" id="XQX-C5-Ovg"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OQZ-S4-D3o" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

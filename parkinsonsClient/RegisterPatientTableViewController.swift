@@ -10,9 +10,10 @@ import UIKit
 
 class RegisterPatientTableViewController: UITableViewController {
 
-    @IBOutlet weak var createAccountButton: UIButton!
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.title = "Patient Registration" 
         
 
         // Uncomment the following line to preserve selection between presentations
