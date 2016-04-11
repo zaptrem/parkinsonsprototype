@@ -104,7 +104,7 @@ func uploadSound(location: NSURL) -> Int {
     
     var result:Int!
     
-    let request = Alamofire.upload(.GET, "http://192.168.1.3:5000/upload-voice", file: location)
+    let request = Alamofire.upload(.POST, "http://192.168.1.3:5000/upload-voice", file: location)
         request.progress { bytesWritten, totalBytesWritten, totalBytesExpectedToWrite in
             print(totalBytesWritten)
             
