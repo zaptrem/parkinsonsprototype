@@ -40,7 +40,7 @@ class ViewController: UIViewController {
         
         let documentsDirectory = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)[0]
         self.soundFileURL = documentsDirectory.URLByAppendingPathComponent(currentFileName)
-        
+        print (soundFileURL)
         
 
         var recordSettings = [
@@ -51,11 +51,15 @@ class ViewController: UIViewController {
             AVSampleRateKey : 44100.0
         ]
         do {
+            let session = AVAudioSession.sharedInstance()
+            try!  session.setCategory(AVAudioSessionCategoryPlayAndRecord)
+            
             recorder = try AVAudioRecorder(URL: soundFileURL, settings: recordSettings)
             recorder.delegate = self
             recorder.meteringEnabled = true
             recorder.prepareToRecord() // creates/overwrites the file at soundFileURL
             recorder.recordForDuration(10)
+            print("recording started")
         } catch let error as NSError {
             recorder = nil
             print(error.localizedDescription)

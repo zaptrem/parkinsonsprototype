@@ -10,12 +10,16 @@ import UIKit
 
 class RegisterPatientTableViewController: UITableViewController {
 
+    @IBOutlet var createAccountButton: UITableView!
  
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "Patient Registration" 
         
-
+        createAccountButton.backgroundColor = UIColor(white: 1, alpha: 0.65)
+        createAccountButton.layer.cornerRadius = 5
+        createAccountButton.layer.borderWidth = 1
+        createAccountButton.layer.borderColor = UIColor.blueColor().CGColor
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
