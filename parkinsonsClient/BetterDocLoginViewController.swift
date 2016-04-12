@@ -1,5 +1,5 @@
 //
-//  DoctorLoginViewController.swift
+//  BetterDocLoginViewController.swift
 //  parkinsonsClient
 //
 //  Created by Ryan Tremblay on 4/12/16.
@@ -10,19 +10,10 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-class DoctorLoginViewController: UIViewController {
+class BetterDocLoginViewController: UIViewController {
 
-    @IBOutlet weak var varidoctorLoginButton: UIButton!
-    @IBOutlet weak var idoctorUsername: UITextField!
-
-    @IBOutlet weak var realidoctorUsername: UITextField!
-    @IBOutlet weak var idoctorPassword: UITextField!
-    
-    @IBAction func doctorLoginButton(sender: AnyObject) {
-        
-        //GET SOMETHING!
-        
-        Alamofire.request(.GET, "http://paid-1279.appspot.com/get-doctor", parameters: ["username" : realidoctorUsername.text!, "password" : idoctorPassword.text!]).validate().responseJSON { response in
+    @IBAction func buttonAction(sender: AnyObject) {
+        Alamofire.request(.GET, "http://paid-1279.appspot.com/get-patient", parameters: ["username" : idoctorEmail.text!, "password" : idoctorPassword.text!]).validate().responseJSON { response in
             switch response.result {
             case .Success:
                 if let value = response.result.value {
@@ -36,25 +27,32 @@ class DoctorLoginViewController: UIViewController {
                     let realPass = password.string!
                     //let username = (json["username"] as AnyObject? as? String)
                     print("JSON: \(json)")
-//                    self.patientjson = json
-//                    var patientData = PatientData()
+                    //self.patientjson = json
+                    //var patientData = PatientData()
                     //patientData.json = json
                     let defaults = NSUserDefaults.standardUserDefaults()
                     defaults.setValue(realusername, forKey: "doctorUsername")
                     defaults.setValue(realPass, forKey: "doctorPassword")
-                    self.performSegueWithIdentifier("pushtodoctor", sender: self)
+                    self.performSegueWithIdentifier("pushtopatientdash", sender: self)
                     
-
+                    
+                    if json == "Incorrect password" {
+                        //Don't proceed
+                    }else{
+                        
+                    }
+                    
+                }
+            case .Failure(let error):
+                print(error)
             }
         }
-        }
     }
-    
+    @IBOutlet weak var idoctorButton: UIButton!
+    @IBOutlet weak var idoctorPassword: UITextField!
+    @IBOutlet weak var idoctorEmail: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-        varidoctorLoginButton.layer.cornerRadius = 5
-        varidoctorLoginButton.layer.borderWidth = 1
-        varidoctorLoginButton.layer.borderColor = UIColor.blueColor().CGColor
 
         // Do any additional setup after loading the view.
     }
@@ -75,5 +73,4 @@ class DoctorLoginViewController: UIViewController {
     }
     */
 
-}
 }

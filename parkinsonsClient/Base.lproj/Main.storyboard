@@ -1610,43 +1610,43 @@
             </objects>
             <point key="canvasLocation" x="2444.5" y="8.5"/>
         </scene>
-        <!--Doctor Login View Controller-->
+        <!--Better Doc Login View Controller-->
         <scene sceneID="8ZO-WB-bF0">
             <objects>
-                <viewController id="ykD-6h-hJP" customClass="DoctorLoginViewController" customModule="parkinsonsClient" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ykD-6h-hJP" customClass="BetterDocLoginViewController" customModule="parkinsonsClient" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rgP-5R-T55">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1UW-cS-9bA">
-                                <rect key="frame" x="164" y="410" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Login"/>
-                                <connections>
-                                    <action selector="doctorLoginButton:" destination="ykD-6h-hJP" eventType="touchUpInside" id="YcR-vF-KJi"/>
-                                </connections>
-                            </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Email" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="OGo-7J-mwN">
-                                <rect key="frame" x="99" y="291" width="177" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Password" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="CzM-Jo-7XK">
                                 <rect key="frame" x="99" y="355" width="177" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Email" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="OGo-7J-mwN">
+                                <rect key="frame" x="99" y="291" width="177" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1UW-cS-9bA">
+                                <rect key="frame" x="164" y="410" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Login"/>
+                                <connections>
+                                    <action selector="buttonAction:" destination="ykD-6h-hJP" eventType="touchUpInside" id="zeg-3w-DLr"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="pz4-pn-yRf"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="idoctorPassword" destination="CzM-Jo-7XK" id="vh0-ih-k1B"/>
-                        <outlet property="realidoctorUsername" destination="OGo-7J-mwN" id="FSJ-p4-57e"/>
-                        <outlet property="varidoctorLoginButton" destination="1UW-cS-9bA" id="ckM-qX-lrc"/>
+                        <outlet property="idoctorButton" destination="1UW-cS-9bA" id="XTv-pe-pSE"/>
+                        <outlet property="idoctorEmail" destination="OGo-7J-mwN" id="IS5-Yd-97C"/>
+                        <outlet property="idoctorPassword" destination="CzM-Jo-7XK" id="I08-bd-RvY"/>
                         <segue destination="0ky-Ou-JLC" kind="push" identifier="pushtodoctor" id="DZn-4F-FyV"/>
                     </connections>
                 </viewController>
@@ -1654,10 +1654,10 @@
             </objects>
             <point key="canvasLocation" x="1913.5" y="851.5"/>
         </scene>
-        <!--Doctor Dashboard View Controller-->
+        <!--Doc Dash View Controller-->
         <scene sceneID="Ja0-uF-S5a">
             <objects>
-                <viewController id="0ky-Ou-JLC" customClass="DoctorDashboardViewController" customModule="parkinsonsClient" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="0ky-Ou-JLC" customClass="DocDashViewController" customModule="parkinsonsClient" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Yym-qf-mJX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1730,14 +1730,13 @@
                     <navigationItem key="navigationItem" id="BqA-pE-QXx"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="doctorCode" destination="XOW-Bh-4mt" id="DgH-2C-xMH"/>
-                        <outlet property="realWelcomeLabel" destination="fCI-eJ-uUu" id="CPh-Wj-Lw2"/>
-                        <outlet property="test1" destination="LHh-PD-7dR" id="GZV-iL-gbD"/>
-                        <outlet property="test2" destination="JHH-fg-RxH" id="xa3-ew-WQV"/>
-                        <outlet property="test3" destination="fzR-Be-Mfn" id="WAV-dD-9qS"/>
-                        <outlet property="test4" destination="y3L-A1-7Uf" id="C3W-pP-su8"/>
-                        <outlet property="test5" destination="cOX-ee-BNc" id="bY5-4S-ZM0"/>
-                        <outlet property="welcomeLabel" destination="fCI-eJ-uUu" id="mfe-Tn-mjL"/>
+                        <outlet property="doctorCode" destination="XOW-Bh-4mt" id="ZAr-7b-EwN"/>
+                        <outlet property="test1" destination="LHh-PD-7dR" id="FLA-G0-M9J"/>
+                        <outlet property="test2" destination="JHH-fg-RxH" id="fEo-RV-RYY"/>
+                        <outlet property="test3" destination="fzR-Be-Mfn" id="3mP-JA-h5d"/>
+                        <outlet property="test4" destination="y3L-A1-7Uf" id="R6J-3h-NQ1"/>
+                        <outlet property="test5" destination="cOX-ee-BNc" id="oqm-Xq-8d6"/>
+                        <outlet property="welcomeLabel" destination="fCI-eJ-uUu" id="1Wq-CQ-cs6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HBD-kr-Zlg" userLabel="First Responder" sceneMemberID="firstResponder"/>
