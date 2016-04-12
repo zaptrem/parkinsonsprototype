@@ -22,6 +22,8 @@
 		B6779B0E1CB9A734000ADF5D /* PreRegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6779B0D1CB9A734000ADF5D /* PreRegistrationViewController.swift */; };
 		B6A5F3671CB58658000D8449 /* theRealCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A5F3661CB58658000D8449 /* theRealCode.swift */; };
 		B6A5F3691CB5FAF7000D8449 /* TutorialPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A5F3681CB5FAF7000D8449 /* TutorialPageViewController.swift */; };
+		B6D8FB811CBCD00E0050FD30 /* DoctorDashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D8FB801CBCD00E0050FD30 /* DoctorDashboardViewController.swift */; };
+		B6D8FB831CBCD4630050FD30 /* PatientDashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D8FB821CBCD4630050FD30 /* PatientDashboardViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -56,6 +58,8 @@
 		B6779B0D1CB9A734000ADF5D /* PreRegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreRegistrationViewController.swift; sourceTree = "<group>"; };
 		B6A5F3661CB58658000D8449 /* theRealCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = theRealCode.swift; sourceTree = "<group>"; };
 		B6A5F3681CB5FAF7000D8449 /* TutorialPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialPageViewController.swift; sourceTree = "<group>"; };
+		B6D8FB801CBCD00E0050FD30 /* DoctorDashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoctorDashboardViewController.swift; sourceTree = "<group>"; };
+		B6D8FB821CBCD4630050FD30 /* PatientDashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientDashboardViewController.swift; sourceTree = "<group>"; };
 		B6ED73211C8260FE00C70716 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Pods/../build/Debug-iphoneos/Alamofire.framework"; sourceTree = "<group>"; };
 		E57849B501ED1386723BEC30 /* Pods-parkinsonsClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-parkinsonsClient.debug.xcconfig"; path = "Pods/Target Support Files/Pods-parkinsonsClient/Pods-parkinsonsClient.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -119,6 +123,8 @@
 				B6779B0D1CB9A734000ADF5D /* PreRegistrationViewController.swift */,
 				B64C6F901CBCC09B006D83EC /* PatientLoginViewController.swift */,
 				B6532BD81C8242720017FE17 /* Main.storyboard */,
+				B6D8FB821CBCD4630050FD30 /* PatientDashboardViewController.swift */,
+				B6D8FB801CBCD00E0050FD30 /* DoctorDashboardViewController.swift */,
 				B64C6F921CBCC185006D83EC /* DoctorLoginViewController.swift */,
 				B60089711CBC9A4C003BADD3 /* PatientRegisterTableViewController.swift */,
 				B60089731CBC9F32003BADD3 /* DoctorRegisterTableViewController.swift */,
@@ -255,6 +261,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6532BD71C8242720017FE17 /* ViewController.swift in Sources */,
+				B6D8FB831CBCD4630050FD30 /* PatientDashboardViewController.swift in Sources */,
 				B64C6F931CBCC185006D83EC /* DoctorLoginViewController.swift in Sources */,
 				B6779B0A1CB97E4C000ADF5D /* ContributeViewController.swift in Sources */,
 				B64C6F911CBCC09B006D83EC /* PatientLoginViewController.swift in Sources */,
@@ -262,6 +269,7 @@
 				B6A5F3691CB5FAF7000D8449 /* TutorialPageViewController.swift in Sources */,
 				B60089741CBC9F32003BADD3 /* DoctorRegisterTableViewController.swift in Sources */,
 				B6779B081CB8D522000ADF5D /* NegativeViewController.swift in Sources */,
+				B6D8FB811CBCD00E0050FD30 /* DoctorDashboardViewController.swift in Sources */,
 				B6A5F3671CB58658000D8449 /* theRealCode.swift in Sources */,
 				B6532BD51C8242720017FE17 /* AppDelegate.swift in Sources */,
 				B6779B0E1CB9A734000ADF5D /* PreRegistrationViewController.swift in Sources */,

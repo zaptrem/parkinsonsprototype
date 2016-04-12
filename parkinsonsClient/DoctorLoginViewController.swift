@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import SwiftyJSON
 
 class DoctorLoginViewController: UIViewController {
 
@@ -20,12 +21,31 @@ class DoctorLoginViewController: UIViewController {
     @IBAction func doctorLoginButton(sender: AnyObject) {
         
         //GET SOMETHING!
-        Alamofire.request(.GET, "https://httpbin.org/get", parameters: ["username" : "one", "password" : "two", "full_name" : "Three"])
-            .response { request, response, data, error in
-                print(request)
-                print(response)
-                print(data)
-                print(error)
+        
+        Alamofire.request(.GET, "http://paid-1279.appspot.com/get-doctor", parameters: ["username" : realidoctorUsername.text!, "password" : idoctorPassword.text!]).validate().responseJSON { response in
+            switch response.result {
+            case .Success:
+                if let value = response.result.value {
+                    let json = JSON(value)
+                    let username = json["username"]
+                    let realusername = username.string!
+                    
+                    print(username)
+                    print(username.type)
+                    let password = json["password"]
+                    let realPass = password.string!
+                    //let username = (json["username"] as AnyObject? as? String)
+                    print("JSON: \(json)")
+//                    self.patientjson = json
+//                    var patientData = PatientData()
+                    //patientData.json = json
+                    let defaults = NSUserDefaults.standardUserDefaults()
+                    defaults.setValue(realusername, forKey: "doctorUsername")
+                    defaults.setValue(realPass, forKey: "doctorPassword")
+                    self.performSegueWithIdentifier("pushtodoctor", sender: self)
+                    
+
+            }
         }
         
     }
