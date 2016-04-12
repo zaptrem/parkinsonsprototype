@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import SwiftyJSON
 
 class DoctorRegisterTableViewController: UITableViewController {
 
@@ -26,12 +27,16 @@ class DoctorRegisterTableViewController: UITableViewController {
         var doctorEmail = idoctorEmail.text
         
         //UPLOAD THIS INFO!!!
-        Alamofire.request(.GET, "https://httpbin.org/get", parameters: ["username" : "one", "password" : "two", "full_name" : "Three"])
-            .response { request, response, data, error in
-                print(request)
-                print(response)
-                print(data)
+        Alamofire.request(.GET, "http://paid-1279.appspot.com/new-doctor", parameters: ["username" : doctorEmail!, "password" : doctorPassword!, "full_name" : doctorFullName]).validate().responseJSON { response in
+            switch response.result {
+            case .Success:
+                if let value = response.result.value {
+                    let json = JSON(value)
+                    print("JSON: \(json)")
+                }
+            case .Failure(let error):
                 print(error)
+            }
         }
         
         

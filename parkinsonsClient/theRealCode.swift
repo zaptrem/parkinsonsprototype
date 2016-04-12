@@ -104,24 +104,24 @@ func uploadSound(location: NSURL) -> Int {
     
     var result:Int!
     
-    let request = Alamofire.upload(.POST, "http://192.168.1.3:5000/upload-voice", file: location)
-        request.progress { bytesWritten, totalBytesWritten, totalBytesExpectedToWrite in
-            print(totalBytesWritten)
-            
-            // This closure is NOT called on the main queue for performance
-            // reasons. To update your ui, dispatch to the main queue.
-            dispatch_async(dispatch_get_main_queue()) {
-                print("Total bytes written on main queue: \(totalBytesWritten)")
-            }
-        }
-        request.responseJSON { response in
-            debugPrint(response)
-            print(response)
-        
-    }
-        request.response { response in
-                print(response)
-    }
+//    let request = Alamofire.upload(.POST, "http://192.168.1.3:5000/upload-voice", file: location)
+//        request.progress { bytesWritten, totalBytesWritten, totalBytesExpectedToWrite in
+//            print(totalBytesWritten)
+//            
+//            // This closure is NOT called on the main queue for performance
+//            // reasons. To update your ui, dispatch to the main queue.
+//            dispatch_async(dispatch_get_main_queue()) {
+//                print("Total bytes written on main queue: \(totalBytesWritten)")
+//            }
+//        }
+//        request.responseJSON { response in
+//            debugPrint(response)
+//            print(response)
+//        
+//    }
+//        request.response { response in
+//                print(response)
+//    }
     
 //    Alamofire.upload(.POST, "http://localhost:8080/rest/service/upload?attachmentName=file.jpg", location)
 //        .progress { (bytesWritten, totalBytesWritten, totalBytesExpectedToWrite) in

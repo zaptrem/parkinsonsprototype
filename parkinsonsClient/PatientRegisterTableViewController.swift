@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import SwiftyJSON
 
 class PatientRegisterTableViewController: UITableViewController {
     @IBOutlet weak var varcreatePatientAccountButton: UIButton!
@@ -27,18 +28,23 @@ class PatientRegisterTableViewController: UITableViewController {
         var patientEmail = ipatientEmail.text
         var patientDoctorCode = ipatientDoctorCode.text
         
-        //UPLOAD THIS INFO!!!
-        Alamofire.request(.GET, "https://httpbin.org/get", parameters: ["username" : "one", "password" : "two", "full_name" : "Three"])
-            .response { request, response, data, error in
-                print(request)
-                print(response)
-                print(data)
+        
+        Alamofire.request(.GET, "http://paid-1279.appspot.com/new-patient", parameters: ["username" : patientEmail!, "password" : patientPassword!, "full_name" : patientFullName, "doctor_code" : patientDoctorCode!]).validate().responseJSON { response in
+            switch response.result {
+            case .Success:
+                if let value = response.result.value {
+                    let json = JSON(value)
+                    print("JSON: \(json)")
+                }
+            case .Failure(let error):
                 print(error)
+            }
+        }
         }
         
         
         
-    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

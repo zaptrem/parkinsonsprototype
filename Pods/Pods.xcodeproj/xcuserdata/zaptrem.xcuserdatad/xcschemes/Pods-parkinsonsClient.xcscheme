@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'A66655E3667CE45E39CA5866'
+               BlueprintIdentifier = '6BC8E8BCDF4A78220E8BF62B'
                BlueprintName = 'Pods-parkinsonsClient'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'Pods_parkinsonsClient.framework'>
