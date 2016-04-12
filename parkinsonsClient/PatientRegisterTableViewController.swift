@@ -1,25 +1,50 @@
 //
-//  RegisterTableViewController.swift
+//  PatientRegisterTableViewController.swift
 //  parkinsonsClient
 //
-//  Created by Ryan Tremblay on 4/9/16.
+//  Created by Ryan Tremblay on 4/11/16.
 //  Copyright © 2016 FP Computer Club. All rights reserved.
 //
 
 import UIKit
+import Alamofire
 
-class RegisterPatientTableViewController: UITableViewController {
+class PatientRegisterTableViewController: UITableViewController {
+    @IBOutlet weak var varcreatePatientAccountButton: UIButton!
+    
+    @IBOutlet weak var ipatientFirstName: UITextField!
 
-    @IBOutlet var createAccountButton: UITableView!
- 
+    @IBOutlet weak var ipatientLastName: UITextField!
+    @IBOutlet weak var ipatientEmail: UITextField!
+    
+    @IBOutlet weak var ipatientPassword: UITextField!
+    
+    @IBOutlet weak var ipatientDoctorCode: UITextField!
+    
+    @IBAction func createPatientAccountButton(sender: AnyObject) {
+        var patientFullName = (ipatientFirstName.text!+" "+ipatientLastName.text!)
+        var patientPassword = ipatientPassword.text
+        var patientEmail = ipatientEmail.text
+        var patientDoctorCode = ipatientDoctorCode.text
+        
+        //UPLOAD THIS INFO!!!
+        Alamofire.request(.GET, "https://httpbin.org/get", parameters: ["username" : "one", "password" : "two", "full_name" : "Three"])
+            .response { request, response, data, error in
+                print(request)
+                print(response)
+                print(data)
+                print(error)
+        }
+        
+        
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = "Patient Registration" 
         
-        createAccountButton.backgroundColor = UIColor(white: 1, alpha: 0.65)
-        createAccountButton.layer.cornerRadius = 5
-        createAccountButton.layer.borderWidth = 1
-        createAccountButton.layer.borderColor = UIColor.blueColor().CGColor
+        varcreatePatientAccountButton.layer.cornerRadius = 5
+        varcreatePatientAccountButton.layer.borderWidth = 1
+        varcreatePatientAccountButton.layer.borderColor = UIColor.blueColor().CGColor
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -36,12 +61,12 @@ class RegisterPatientTableViewController: UITableViewController {
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 2
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return 3
     }
 
     /*
